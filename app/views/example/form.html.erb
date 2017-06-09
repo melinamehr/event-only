@@ -1,1 +1,26 @@
-example@form page
+  <%= form_tag("/job_applications", method: "get") do %>
+<p>
+  <%= label_tag(:job_application_full_name, "Full name") %>
+  <%= text_field_tag("job_application[full_name]") %>
+</p>
+
+<p>
+  <%= label_tag(:job_application_hobby, "Hobby") %>
+  <%= text_field_tag("job_application[hobby]") %>
+</p>
+
+<p>
+  <%= label_tag(:job_application_years_experience, "Years experience") %>
+  <%= text_field_tag("job_application[years_experience]") %>
+</p>
+
+<p>
+  <%= label_tag(:job_application_available_date, "Available date") %>
+  <%= date_field_tag("job_application[available_date]") %>
+</p>
+
+<p>
+  <%= submit_tag("Create Job Application") %>
+</p>
+
+  <% end %>
